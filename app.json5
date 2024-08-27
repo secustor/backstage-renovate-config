@@ -1,0 +1,20 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  extends: [
+    "github>secustor/backstage-renovate-config//presets/group-by-plugin",
+    "github>secustor/backstage-renovate-config//presets/no-esm"
+  ],
+  ignorePresets: [
+    // we cannot update right now to @mui
+    'replacements:material-ui-to-mui',
+  ],
+  // create a single PR to update all in range upgrades, to save CI minutes
+  lockFileMaintenance: {
+    enabled: true,
+  },
+  postUpdateOptions: [
+    // run `yarn dedupe --strategy highest` after every npm package upgrade
+    'yarnDedupeHighest',
+  ],
+
+}

@@ -1,0 +1,34 @@
+{
+  "packageRules": [
+    {
+      "matchPackageNames": [
+        "@sindresorhus/is"
+      ],
+      "allowedVersions": "<5.0.0"
+    },
+    {
+      "matchPackageNames": [
+        "yn"
+      ],
+      "allowedVersions": "<5.0.0"
+    },
+    {
+      "matchPackageNames": [
+        "find-up"
+      ],
+      "allowedVersions": "<6.0.0"
+    },
+    {
+      "matchPackageNames": [
+        "node-fetch"
+      ],
+      "allowedVersions": "<3.0.0"
+    },
+    {
+      "matchPackageNames": [
+        "nanoid"
+      ],
+      "allowedVersions": "<4.0.0"
+    }
+  ]
+}
