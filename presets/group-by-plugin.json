@@ -1,0 +1,12 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "matchSourceUrls": [
+        "https://github.com/backstage/backstage/",
+        "https://github.com/backstage/community-plugins"
+      ],
+      "groupName": "Backstage plugin {{ lookup (split packageName '-') 1 }}"
+    }
+  ]
+}
