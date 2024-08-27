@@ -1,8 +1,8 @@
 # backstage-renovate-config
 Holds Renovate presets targeted at Backstage repos
 
-[!NOTE]
-Be aware that this requires significant trust in the owner of this repository as it always the case for external Renovate presets!
+> [!NOTE]
+> Be aware that this requires significant trust in the owner of this repository as it always the case for external Renovate presets!
 This is as it can introduce changes without your input in case you are not requiring approval for PRs or allow merging changes in without PRs.
 YOU HAVE BEEN WARNED!
 
