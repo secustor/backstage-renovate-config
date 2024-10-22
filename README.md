@@ -36,6 +36,22 @@ For more information on how to configure Renovate presets see the [Renovate docu
 ### `default`
 This preset is the default one and is meant to be used for Backstage repositories that are hosted on GitHub and makes use of features provided the hosted Mend App
 
+### `app`
+The same as default. 
+
+### `self-hosted`
+Requires access to `postpostUpgradeTasks`. 
+This means that [`allowedPostUpgradeCommands`](https://docs.renovatebot.com/self-hosted-configuration/#allowedpostupgradecommands) is configured to allow running `yarn backstage-cli versions:bump` commands
+
+## Feature presets
+
+### Group by plugin
+Groups all PRs based on the plugin. Therefore all updates of the `catalog` are grouped together including `catalog`, `catalog-backend` and so on. 
+
+### Exclude ESM updates
+Backstage does not support ESM at the moment. This means updates which are ESM-only will break the setup. 
+This rule prevents updates to known ESM-only packages. 
+
 ## Contributing
 If you want to propose a new preset or modify an existing one, you can open a PR with the changes.
 

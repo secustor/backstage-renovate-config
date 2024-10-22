@@ -1,4 +1,41 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  extends: [
+    "github>secustor/backstage-renovate-config//presets/group-by-plugin",
+    "github>secustor/backstage-renovate-config//presets/no-esm"
+  ],
 
+  // create a single PR to update all in range upgrades, to save CI minutes
+  lockFileMaintenance: {
+    enabled: true,
+  },
+
+  postUpdateOptions: [
+    // run `yarn dedupe --strategy highest` after every npm package upgrade
+    'yarnDedupeHighest',
+  ],
+  
+  packageRules: [
+    {
+      // run backstage upgrade command if there is a new Backstage release
+      matchPackageNames: ["backstage/backstage"],
+      match
+      "postUpgradeTasks": {
+        "commands": ["yarn backstage-cli versions:bump --pattern '@{backstage,backstage-community}/*' --release {{{newVersion}}}"],
+        "executionMode": "branch"
+      }
+    }
+  ],
+
+  customManagers: [
+    {
+      // update backstage.json file
+      customType: 'regex',
+      fileMatch: 'backstage\\.json$',
+      matchStrings: ['"version":\\s*"(?<currentValue>[^"]+)'],
+      depNameTemplate: 'backstage/backstage',
+      datasourceTemplate: 'github-releases',
+      versioningTemplate: 'semver-coerced',
+    },
+  ]
 }

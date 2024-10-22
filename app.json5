@@ -4,10 +4,7 @@
     "github>secustor/backstage-renovate-config//presets/group-by-plugin",
     "github>secustor/backstage-renovate-config//presets/no-esm"
   ],
-  ignorePresets: [
-    // we cannot update right now to @mui
-    'replacements:material-ui-to-mui',
-  ],
+
   // create a single PR to update all in range upgrades, to save CI minutes
   lockFileMaintenance: {
     enabled: true,
@@ -17,4 +14,23 @@
     'yarnDedupeHighest',
   ],
 
+  packageRules: [
+    {
+      matchDatasources: ["npm"],
+      matchSourceUrls: ["https://github.com/backstage/backstage"],
+      groupName: "Backstage Core"
+    }
+  ],
+
+  customManagers: [
+    {
+      // update backstage.json file
+      customType: 'regex',
+      fileMatch: 'backstage\\.json$',
+      matchStrings: ['"version":\\s*"(?<currentValue>[^"]+)'],
+      depNameTemplate: 'backstage/backstage',
+      datasourceTemplate: 'github-releases',
+      versioningTemplate: 'semver-coerced',
+    },
+  ]
 }
