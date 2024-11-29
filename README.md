@@ -29,12 +29,13 @@ If you want to use different presets, you can specify them like this:
 ```
 The above config will use the `self-hosted` preset.
 
-For more information on how to configure Renovate presets see the [Renovate documentation](https://docs.renovatebot.com/config-presets/)
+For more information on how to configure Renovate presets, see the [Renovate documentation](https://docs.renovatebot.com/config-presets/)
 
 ## Available full config presets
 
 ### `default`
-This preset is the default one and is meant to be used for Backstage repositories that are hosted on GitHub and makes use of features provided the hosted Mend App
+This preset is the default one and is meant to be used for Backstage repositories that are hosted on GitHub and makes use of features provided the hosted Mend App.
+It is an opinionated preset to be used for the most common use cases.
 
 ### `app`
 The same as default. 
@@ -51,6 +52,10 @@ Groups all PRs based on the plugin. Therefore, all updates of the `catalog` are 
 ### Exclude ESM updates
 Backstage does not support ESM at the moment. This means updates which are ESM-only will break the setup. 
 This rule prevents updates to known ESM-only packages. 
+
+### Update `backstage.json`
+This rule will update the `backstage.json` file in the repository to the latest Backstage release.
+It is used by full config presets, but can also be used standalone.
 
 ## Contributing
 If you want to propose a new preset or modify an existing one, you can open a PR with the changes.
