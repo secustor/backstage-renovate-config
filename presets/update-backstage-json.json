@@ -1,0 +1,14 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "customManagers": [
+    {
+      "description": "update backstage.json file",
+      "customType": "regex",
+      "fileMatch": "backstage\\.json$",
+      "matchStrings": ["\"version\":\\s*\"(?<currentValue>[^\"]+)"],
+      "depNameTemplate": "backstage/backstage",
+      "datasourceTemplate": "github-releases",
+      "versioningTemplate": "semver-coerced"
+    }
+  ]
+}

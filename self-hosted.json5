@@ -1,7 +1,8 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
   extends: [
-    "github>secustor/backstage-renovate-config//presets/no-esm"
+    "github>secustor/backstage-renovate-config//presets/no-esm",
+    "github>secustor/backstage-renovate-config//presets/update-backstage-json"
   ],
 
   // create a single PR to update all in range upgrades, to save CI minutes
@@ -24,16 +25,4 @@
       }
     }
   ],
-
-  customManagers: [
-    {
-      // update backstage.json file
-      customType: 'regex',
-      fileMatch: 'backstage\\.json$',
-      matchStrings: ['"version":\\s*"(?<currentValue>[^"]+)'],
-      depNameTemplate: 'backstage/backstage',
-      datasourceTemplate: 'github-releases',
-      versioningTemplate: 'semver-coerced',
-    },
-  ]
 }
