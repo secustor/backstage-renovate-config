@@ -17,6 +17,9 @@
   packageRules: [
     {
       matchSourceUrls: ["https://github.com/backstage/backstage"],
+      // update Backstage packages immediately, this is to prevent to update backstage.json only but not the packages
+      minimumReleaseAge: null,
+      // group all Backstage packages together
       groupName: "Backstage Core"
     }
   ],
