@@ -17,6 +17,12 @@
   
   packageRules: [
     {
+      // disable updating NPM packages of Backstage Core as these are updated by Backstage CLI
+      matchDatasources: ["npm"],
+      matchSourceUrls: ["https://github.com/backstage/backstage"],
+      enabled: false
+    },
+    {
       // run backstage upgrade command if there is a new Backstage release
       matchPackageNames: ["backstage/backstage"],
       "postUpgradeTasks": {
