@@ -16,7 +16,6 @@
 
   packageRules: [
     {
-      matchDatasources: ["npm"],
       matchSourceUrls: ["https://github.com/backstage/backstage"],
       groupName: "Backstage Core"
     }
