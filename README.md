@@ -46,7 +46,7 @@ This means that [`allowedPostUpgradeCommands`](https://docs.renovatebot.com/self
 ## Feature presets
 
 ### Group by plugin
-Groups all PRs based on the plugin. Therefore all updates of the `catalog` are grouped together including `catalog`, `catalog-backend` and so on. 
+Groups all PRs based on the plugin. Therefore, all updates of the `catalog` are grouped together including `catalog`, `catalog-backend` and so on. 
 
 ### Exclude ESM updates
 Backstage does not support ESM at the moment. This means updates which are ESM-only will break the setup. 
