@@ -19,9 +19,8 @@
     {
       // run backstage upgrade command if there is a new Backstage release
       matchPackageNames: ["backstage/backstage"],
-      match
       "postUpgradeTasks": {
-        "commands": ["yarn backstage-cli versions:bump --pattern '@{backstage,backstage-community}/*' --release {{{newVersion}}}"],
+        "commands": ["yarn backstage-cli versions:bump --pattern '@{backstage}/*' --release {{{newVersion}}}"],
         "executionMode": "branch"
       }
     }
