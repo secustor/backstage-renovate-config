@@ -1,12 +1,18 @@
 {
   "packageRules": [
     {
+      "matchDatasources": [
+        "npm"
+      ],
       "matchPackageNames": [
         "node-fetch"
       ],
       "allowedVersions": "<3.0.0"
     },
     {
+      "matchDatasources": [
+        "npm"
+      ],
       "matchPackageNames": [
         "nanoid",
         "octokit",
@@ -15,6 +21,9 @@
       "allowedVersions": "<4.0.0"
     },
     {
+      "matchDatasources": [
+        "npm"
+      ],
       "matchPackageNames": [
         "@sindresorhus/is",
         "yn",
@@ -24,6 +33,9 @@
       "allowedVersions": "<5.0.0"
     },
     {
+      "matchDatasources": [
+        "npm"
+      ],
       "matchPackageNames": [
         "find-up"
       ],
