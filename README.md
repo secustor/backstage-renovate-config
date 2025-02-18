@@ -23,7 +23,7 @@ If you want to use different presets, you can specify them like this:
 ```json
 {
   "extends": [
-    "github>secustor/backstage-renovate-config:self-hosted"
+    "github>secustor/backstage-renovate-config:self-hosted.json5"
   ]
 }
 ```
@@ -34,14 +34,20 @@ For more information on how to configure Renovate presets, see the [Renovate doc
 ## Available full config presets
 
 ### `default`
-This preset is the default one and is meant to be used for Backstage repositories that are hosted on GitHub and makes use of features provided the hosted Mend App.
+
+This preset is the default one and is meant
+to be used for Backstage repositories where ever they are hosted.
 It is an opinionated preset to be used for the most common use cases.
 
 ### `app`
-The same as default. 
+
+This preset is currently the same as the `default` preset,
+but is intended for users of the Mend.io Github App.
+In the future, it might contain additional features that are only available for users of the app.
 
 ### `self-hosted`
-Requires access to `postpostUpgradeTasks`. 
+
+Requires access to `postpostUpgradeTasks` and `allowedPostUpgradeCommands` which are only available for self-hosted Renovate instances.
 This means that [`allowedPostUpgradeCommands`](https://docs.renovatebot.com/self-hosted-configuration/#allowedpostupgradecommands) is configured to allow running `yarn backstage-cli versions:bump` commands
 
 ## Feature presets
