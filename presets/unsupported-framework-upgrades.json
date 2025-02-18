@@ -3,16 +3,6 @@
   "packageRules": [
     {
       "description": [
-        "Do not upgrade to React Router v7",
-        "https://github.com/backstage/backstage/issues/27927"
-      ],
-      "matchSourceUrls": [
-        "https://github.com/remix-run/react-router/**"
-      ],
-      "allowedVersions": "<7.0.0"
-    },
-    {
-      "description": [
         "Do not upgrade to Express v5",
         "https://github.com/backstage/backstage/issues/27808"
       ],
@@ -31,8 +21,20 @@
         "Do not upgrade to React 19",
         "https://github.com/backstage/backstage/issues/28080"
       ],
-      "extends": ["packages:react"],
+      "extends": [
+        "packages:react"
+      ],
       "allowedVersions": "<19.0.0"
+    },
+    {
+      "description": [
+        "Do not upgrade to React Router v7",
+        "https://github.com/backstage/backstage/issues/27927"
+      ],
+      "matchSourceUrls": [
+        "https://github.com/remix-run/react-router"
+      ],
+      "allowedVersions": "<7.0.0"
     }
   ]
 }
