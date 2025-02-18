@@ -29,7 +29,7 @@
     {
       "description": [
         "Do not upgrade to React 19",
-        "https://github.com/backstage/backstage/issues/24554"
+        "https://github.com/backstage/backstage/issues/28080"
       ],
       "extends": ["packages:react"],
       "allowedVersions": "<19.0.0"
