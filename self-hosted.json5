@@ -3,7 +3,7 @@
   extends: [
     "github>secustor/backstage-renovate-config//presets/no-esm",
     "github>secustor/backstage-renovate-config//presets/unsupported-framework-upgrades",
-    "github>secustor/backstage-renovate-config//presets/update-backstage-json"
+    "github>secustor/backstage-renovate-config//presets/update-backstage-json",
   ],
 
   // create a single PR to update all in range upgrades, to save CI minutes
@@ -13,23 +13,25 @@
 
   postUpdateOptions: [
     // run `yarn dedupe --strategy highest` after every npm package upgrade
-    'yarnDedupeHighest',
+    "yarnDedupeHighest",
   ],
-  
+
   packageRules: [
     {
       // disable updating NPM packages of Backstage Core as these are updated by Backstage CLI
       matchDatasources: ["npm"],
       matchSourceUrls: ["https://github.com/backstage/backstage"],
-      enabled: false
+      enabled: false,
     },
     {
       // run backstage upgrade command if there is a new Backstage release
       matchPackageNames: ["backstage/backstage"],
-      "postUpgradeTasks": {
-        "commands": ["yarn backstage-cli versions:bump --pattern '@{backstage}/*' --release {{{newVersion}}}"],
-        "executionMode": "branch"
-      }
-    }
+      postUpgradeTasks: {
+        commands: [
+          "yarn backstage-cli versions:bump --pattern '@{backstage}/*' --release {{{newVersion}}}",
+        ],
+        executionMode: "branch",
+      },
+    },
   ],
 }
