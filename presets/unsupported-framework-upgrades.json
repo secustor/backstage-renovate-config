@@ -2,6 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "packageRules": [
     {
+      "allowedVersions": "<5.0.0",
       "description": [
         "Do not upgrade to Express v5",
         "https://github.com/backstage/backstage/issues/27808"
@@ -11,24 +12,23 @@
         "express",
         "@types/express",
         "@types/express-serve-static-core"
-      ],
-      "allowedVersions": "<5.0.0"
+      ]
     },
     {
+      "allowedVersions": "<19.0.0",
       "description": [
         "Do not upgrade to React 19",
         "https://github.com/backstage/backstage/issues/28080"
       ],
-      "extends": ["packages:react"],
-      "allowedVersions": "<19.0.0"
+      "extends": ["packages:react"]
     },
     {
+      "allowedVersions": "<7.0.0",
       "description": [
         "Do not upgrade to React Router v7",
         "https://github.com/backstage/backstage/issues/27927"
       ],
-      "matchSourceUrls": ["https://github.com/remix-run/react-router"],
-      "allowedVersions": "<7.0.0"
+      "matchSourceUrls": ["https://github.com/remix-run/react-router"]
     }
   ]
 }

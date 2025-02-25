@@ -5,6 +5,9 @@
  */
 const config = {
   plugins: ["prettier-plugin-sort-json"],
+
+  // sort packageRule lists
+  jsonRecursiveSort: true,
 };
 
 export default config;
