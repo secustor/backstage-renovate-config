@@ -8,6 +8,10 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+env:
+  # renovate: datasource=node-version depName=node
+  NODE_VERSION: 22.14.0
+
 jobs:
   prettier:
     runs-on: ubuntu-24.04
@@ -21,7 +25,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@1d0ff469b7ec7b3cb9d8673fde0c81c44821de2a # v4.2.0
         with:
-          node-version: 22.14.0
+          node-version: ${{ env.NODE_VERSION }}
           cache: pnpm
 
       - name: Install dev dependencies
