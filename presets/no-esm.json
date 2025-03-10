@@ -1,60 +1,60 @@
 {
   "packageRules": [
     {
+      "allowedVersions": "<3.0.0",
       "matchDatasources": ["npm"],
-      "matchPackageNames": ["node-fetch"],
-      "allowedVersions": "<3.0.0"
+      "matchPackageNames": ["node-fetch"]
     },
     {
+      "allowedVersions": "<4.0.0",
       "matchDatasources": ["npm"],
-      "matchPackageNames": ["nanoid", "octokit", "p-limit"],
-      "allowedVersions": "<4.0.0"
+      "matchPackageNames": ["nanoid", "octokit", "p-limit"]
     },
     {
+      "allowedVersions": "<5.0.0",
       "matchDatasources": ["npm"],
       "matchPackageNames": [
         "@octokit/webhooks-methods",
         "@sindresorhus/is",
-        "yn",
+        "p-map",
         "url-join",
-        "p-map"
-      ],
-      "allowedVersions": "<5.0.0"
+        "yn"
+      ]
     },
     {
+      "allowedVersions": "<6.0.0",
       "matchDatasources": ["npm"],
-      "matchPackageNames": ["find-up"],
-      "allowedVersions": "<6.0.0"
+      "matchPackageNames": ["find-up"]
     },
     {
+      "allowedVersions": "<7.0.0",
       "matchDatasources": ["npm"],
-      "matchPackageNames": ["@octokit/auth-app", "@octokit/oauth-app"],
-      "allowedVersions": "<7.0.0"
+      "matchPackageNames": ["@octokit/auth-app", "@octokit/oauth-app"]
     },
     {
+      "allowedVersions": "<8.0.0",
       "matchDatasources": ["npm"],
-      "matchPackageNames": ["@octokit/graphql"],
-      "allowedVersions": "<8.0.0"
+      "matchPackageNames": ["@octokit/graphql"]
     },
     {
+      "allowedVersions": "<9.0.0",
       "matchDatasources": ["npm"],
-      "matchPackageNames": ["@octokit/plugin-throttling", "@octokit/request"],
-      "allowedVersions": "<9.0.0"
+      "matchPackageNames": ["@octokit/plugin-throttling", "@octokit/request"]
     },
     {
+      "allowedVersions": "<15.0.0",
       "matchDatasources": ["npm"],
-      "matchPackageNames": ["@octokit/graphql-schema"],
-      "allowedVersions": "<15.0.0"
+      "matchPackageNames": ["@octokit/graphql-schema"]
     },
     {
+      "allowedVersions": "<13.0.0",
       "matchDatasources": ["npm"],
-      "matchPackageNames": ["@octokit/webhooks"],
-      "allowedVersions": "<13.0.0"
+      "matchPackageNames": ["@octokit/webhooks"]
     },
     {
+      "allowedVersions": "<21.0.0",
       "matchDatasources": ["npm"],
-      "matchPackageNames": ["@octokit/rest"],
-      "allowedVersions": "<21.0.0"
+      "matchPackageNames": ["@octokit/rest"]
     }
   ]
 }
