@@ -31,4 +31,4 @@ jobs:
       - name: Install dev dependencies
         run: pnpm install --frozen-lockfile --dev
 
-      - run: pnpm run prettier:check
+      - run: pnpm run check
