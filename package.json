@@ -8,6 +8,7 @@
   "type": "module",
   "scripts": {
     "fix": "pnpm run prettier:fix",
+    "check": "pnpm run prettier:check",
     "prettier:check": "prettier --check .",
     "prettier:fix": "prettier --write ."
   },
