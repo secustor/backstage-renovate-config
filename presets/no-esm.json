@@ -24,7 +24,7 @@
     {
       "allowedVersions": "<6.0.0",
       "matchDatasources": ["npm"],
-      "matchPackageNames": ["find-up"]
+      "matchPackageNames": ["@octokit/core", "find-up"]
     },
     {
       "allowedVersions": "<7.0.0",
@@ -42,14 +42,14 @@
       "matchPackageNames": ["@octokit/plugin-throttling", "@octokit/request"]
     },
     {
-      "allowedVersions": "<15.0.0",
-      "matchDatasources": ["npm"],
-      "matchPackageNames": ["@octokit/graphql-schema"]
-    },
-    {
       "allowedVersions": "<13.0.0",
       "matchDatasources": ["npm"],
       "matchPackageNames": ["@octokit/webhooks"]
+    },
+    {
+      "allowedVersions": "<15.0.0",
+      "matchDatasources": ["npm"],
+      "matchPackageNames": ["@octokit/graphql-schema"]
     },
     {
       "allowedVersions": "<21.0.0",
