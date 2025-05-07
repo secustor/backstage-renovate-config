@@ -1,0 +1,14 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "allowedVersions": "<5.0.0",
+      "description": [
+        "Do not migrate to Material-UI v5",
+        "https://github.com/backstage/backstage/issues/7094"
+      ],
+      "matchDatasources": ["npm"],
+      "matchPackageNames": ["@mui/material", "@mui/icons-material"]
+    }
+  ]
+}
