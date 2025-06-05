@@ -16,6 +16,7 @@
       "matchPackageNames": [
         "@octokit/webhooks-methods",
         "@sindresorhus/is",
+        "@types/url-join",
         "p-map",
         "url-join",
         "yn"
