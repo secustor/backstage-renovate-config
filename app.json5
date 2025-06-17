@@ -22,6 +22,8 @@
       minimumReleaseAge: null,
       // group all Backstage packages together
       groupName: "Backstage Core",
+      // do not create a separate PR for major packages as they have to be updated together
+      separateMajorMinor: false,
     },
   ],
 }
