@@ -13,7 +13,7 @@
     "prettier:fix": "prettier --write ."
   },
   "devDependencies": {
-    "prettier": "3.5.3",
+    "prettier": "3.6.0",
     "prettier-plugin-sort-json": "4.1.1"
   }
 }
