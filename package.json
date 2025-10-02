@@ -1,9 +1,9 @@
 {
   "name": "backstage-renovate-config",
-  "packageManager": "pnpm@10.17.1",
+  "packageManager": "pnpm@10.18.0",
   "volta": {
     "node": "22.20.0",
-    "pnpm": "10.17.1"
+    "pnpm": "10.18.0"
   },
   "type": "module",
   "scripts": {
