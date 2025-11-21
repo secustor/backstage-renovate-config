@@ -28,7 +28,7 @@
       matchPackageNames: ["backstage/backstage"],
       postUpgradeTasks: {
         commands: [
-          "yarn dlx -p @backstage/cli backstage-cli versions:bump --release {{{replace '^v' '' newVersion}}}",
+          "yarn dlx -p @backstage/cli backstage-cli versions:bump --release {{{newValue}}}",
         ],
         workingDirTemplate: "{{{packageFileDir}}}",
         executionMode: "branch",
