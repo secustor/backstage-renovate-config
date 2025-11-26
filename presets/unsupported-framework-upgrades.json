@@ -45,6 +45,15 @@
         "https://github.com/backstage/backstage/issues/30208"
       ],
       "matchSourceUrls": ["https://github.com/jestjs/jest"]
+    },
+    {
+      "allowedVersions": "<30.0.0",
+      "description": [
+        "Do not upgrade to Jest v30",
+        "https://github.com/backstage/backstage/issues/30208"
+      ],
+      "matchDatasources": ["npm"],
+      "matchPackageNames": ["@types/jest"]
     }
   ]
 }
