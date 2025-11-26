@@ -54,6 +54,15 @@
       ],
       "matchDatasources": ["npm"],
       "matchPackageNames": ["@types/jest"]
+    },
+    {
+      "allowedVersions": "<4.0.0",
+      "description": [
+        "Do not upgrade to Zod v4",
+        "https://github.com/backstage/backstage/issues/30607"
+      ],
+      "matchDatasources": ["npm"],
+      "matchPackageNames": ["zod"]
     }
   ]
 }
