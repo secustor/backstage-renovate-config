@@ -1,10 +1,6 @@
 {
   "name": "backstage-renovate-config",
   "packageManager": "pnpm@11.19.0",
-  "volta": {
-    "node": "24.19.0",
-    "pnpm": "11.19.0"
-  },
   "type": "module",
   "scripts": {
     "fix": "pnpm run prettier:fix",
