@@ -1,9 +1,9 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
   extends: [
-    "github>secustor/backstage-renovate-config//presets/no-esm",
-    "github>secustor/backstage-renovate-config//presets/unsupported-framework-upgrades",
-    "github>secustor/backstage-renovate-config//presets/update-backstage-json",
+    "./presets/no-esm",
+    "./presets/unsupported-framework-upgrades",
+    "./presets/update-backstage-json",
   ],
 
   // create a single PR to update all in range upgrades, to save CI minutes
