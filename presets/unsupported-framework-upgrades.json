@@ -55,6 +55,16 @@
       ],
       "matchDatasources": ["npm"],
       "matchPackageNames": ["zod"]
+    },
+    {
+      "allowedVersions": "<7.0.0",
+      "description": [
+        "Do not upgrade to TypeScript 7, it ships no JS compiler API which typescript-eslint and the Backstage CLI build require",
+        "https://github.com/typescript-eslint/typescript-eslint/issues/10940",
+        "https://github.com/backstage/backstage/pull/34979"
+      ],
+      "matchDatasources": ["npm"],
+      "matchPackageNames": ["typescript"]
     }
   ]
 }
