@@ -1,6 +1,6 @@
 {
   "name": "backstage-renovate-config",
-  "packageManager": "pnpm@12.20.0",
+  "packageManager": "pnpm@12.21.0",
   "type": "module",
   "scripts": {
     "fix": "pnpm run prettier:fix",
